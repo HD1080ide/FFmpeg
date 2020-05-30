@@ -4844,10 +4844,10 @@ int main(int argc, char **argv)
 
     show_banner(argc, argv, options);
     
-    int i;
+    int ia;
 	printf("argc: %d\n", argc);	
-	for(i=0; i < argc; i++) {
-		printf("argv[%d]: %s\n", i, argv[i]);
+	for(ia=0; ia < argc; ia++) {
+		printf("argv[%d]: %s\n", ia, argv[ia]);
 	}
 
     /* parse options and open all input/output files */
