@@ -1724,7 +1724,7 @@ static OutputStream *new_video_stream(OptionsContext *o, AVFormatContext *oc, in
             av_log(NULL, AV_LOG_FATAL, "Unknown pixel format requestedddddddddddd: %s.\n", frame_pix_fmt);
             exit_program(1);
         }
-        frame_pix_fmt = AV_PIX_FMT_YUV420P12LE;
+        //frame_pix_fmt = AV_PIX_FMT_YUV420P12LE;
 	av_log(NULL, AV_LOG_FATAL, "Test: %s.\n", frame_pix_fmt);
         st->sample_aspect_ratio = video_enc->sample_aspect_ratio;
 
