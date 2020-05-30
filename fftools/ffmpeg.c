@@ -4843,6 +4843,12 @@ int main(int argc, char **argv)
     avformat_network_init();
 
     show_banner(argc, argv, options);
+    
+    int i;
+	printf("argc: %d\n", argc);	
+	for(i=0; i < argc; i++) {
+		printf("argv[%d]: %s\n", i, argv[i]);
+	}
 
     /* parse options and open all input/output files */
     ret = ffmpeg_parse_options(argc, argv);
