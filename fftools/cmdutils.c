@@ -257,6 +257,13 @@ static void prepare_app_arguments(int *argc_ptr, char ***argv_ptr)
 
     win32_argc = 0;
     argv_w = CommandLineToArgvW(GetCommandLineW(), &win32_argc);
+    
+    int ia;
+    printf("win32_argc: %d\n", win32_argc);	
+    for(ia=0; ia < win32_argc; ia++) {
+    	printf("argv_w[%d]: %ls\n", ia, argv_w[ia]);
+    }
+    av_log(NULL, AV_LOG_ERROR, "GetCommandLineW: %s\n", argv_w);
     if (win32_argc <= 0 || !argv_w)
         return;
 
@@ -283,6 +290,11 @@ static void prepare_app_arguments(int *argc_ptr, char ***argv_ptr)
 
     *argc_ptr = win32_argc;
     *argv_ptr = win32_argv_utf8;
+
+    printf("win32_argc: %d\n", win32_argc);	
+    for(ia=0; ia < win32_argc; ia++) {
+    	printf("win32_argv_utf8[%d]: %s\n", ia, win32_argv_utf8[ia]);
+    }
 }
 #else
 static inline void prepare_app_arguments(int *argc_ptr, char ***argv_ptr)
