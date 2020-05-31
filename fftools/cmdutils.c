@@ -382,6 +382,13 @@ int parse_option(void *optctx, const char *opt, const char *arg,
 void parse_options(void *optctx, int argc, char **argv, const OptionDef *options,
                    void (*parse_arg_function)(void *, const char*))
 {
+    int ia;
+    printf("parse_options argc: %d\n", argc);	
+    for(ia=0; ia < argc; ia++) {
+    	printf("parse_options argv[%d]: %s\n", ia, argv[ia]);
+	   printf("parse_options argv[%d]: %s\n", ia, argv[ia]);
+    }
+   
     const char *opt;
     int optindex, handleoptions = 1, ret;
 
@@ -504,6 +511,13 @@ static void check_options(const OptionDef *po)
 
 void parse_loglevel(int argc, char **argv, const OptionDef *options)
 {
+    int ia;
+    printf("parse_loglevel argc: %d\n", argc);	
+    for(ia=0; ia < argc; ia++) {
+    	printf("parse_loglevel argv[%d]: %s\n", ia, argv[ia]);
+	   printf("parse_loglevel argv[%d]: %s\n", ia, argv[ia]);
+    }
+   
     int idx = locate_option(argc, argv, options, "loglevel");
     const char *env;
 
