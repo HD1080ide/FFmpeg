@@ -243,6 +243,8 @@ static int win32_argc = 0;
  */
 static void prepare_app_arguments(int *argc_ptr, char ***argv_ptr)
 {
+    av_log(NULL, AV_LOG_ERROR, "GetCommandLineW\n");
+   
     char *argstr_flat;
     wchar_t **argv_w;
     int i, buffsize = 0, offset = 0;
