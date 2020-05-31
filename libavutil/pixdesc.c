@@ -1477,7 +1477,7 @@ static const AVPixFmtDescriptor av_pix_fmt_descriptors[AV_PIX_FMT_NB] = {
         .flags = AV_PIX_FMT_FLAG_BE | AV_PIX_FMT_FLAG_PLANAR,
     },
     [AV_PIX_FMT_YUV422P10LE] = {
-        .name = "yuv422p10le",
+        .name = "yuv422p10leg",
         .nb_components = 3,
         .log2_chroma_w = 1,
         .log2_chroma_h = 0,
