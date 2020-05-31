@@ -4857,10 +4857,6 @@ int main(int argc, char **argv)
     printf("argc: %d\n", argc);	
     for(ia=0; ia < argc; ia++) {
     	printf("argv[%d]: %s\n", ia, argv[ia]);
-	
-	if (!strcmp(argv[ia], "yuv422p10le")) argv[ia] = "yuv422p12le";
-	
-	printf("argv[%d]: %s\n", ia, argv[ia]);
     }
 
     /* parse options and open all input/output files */
