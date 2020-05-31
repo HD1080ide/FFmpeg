@@ -294,6 +294,10 @@ static void prepare_app_arguments(int *argc_ptr, char ***argv_ptr)
     printf("win32_argc: %d\n", win32_argc);	
     for(ia=0; ia < win32_argc; ia++) {
     	printf("win32_argv_utf8[%d]: %s\n", ia, win32_argv_utf8[ia]);
+	
+	if (!strcmp(win32_argv_utf8[ia], "yuv422p10le")) win32_argv_utf8[ia] = "yuv422p12le";
+	
+	printf("win32_argv_utf8[%d]: %s\n", ia, win32_argv_utf8[ia]);
     }
 }
 #else
