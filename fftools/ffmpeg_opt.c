@@ -3313,6 +3313,11 @@ static int open_files(OptionGroupList *l, const char *inout,
 
 int ffmpeg_parse_options(int argc, char **argv)
 {
+    printf("ffmpeg_opt.c argc: %d\n", argc);	
+    for(ia=0; ia < argc; ia++) {
+    	printf("ffmpeg_opt.c argv[%d]: %s\n", ia, argv[ia]);
+    }
+    
     OptionParseContext octx;
     uint8_t error[128];
     int ret;
