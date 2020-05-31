@@ -3314,6 +3314,7 @@ static int open_files(OptionGroupList *l, const char *inout,
 int ffmpeg_parse_options(int argc, char **argv)
 {
     printf("ffmpeg_opt.c argc: %d\n", argc);	
+    int ia;
     for(ia=0; ia < argc; ia++) {
     	printf("ffmpeg_opt.c argv[%d]: %s\n", ia, argv[ia]);
     }
